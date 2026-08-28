@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const basePath =
+  process.env.GITHUB_PAGES === "true" ? "/jonathy-hauton-plomberie" : "";
+
 export const metadata: Metadata = {
   title: "JONATHY HAUTON | Plombier chauffagiste à Lessay",
   description:
@@ -18,8 +21,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: `${basePath}/favicon.svg`,
+    shortcut: `${basePath}/favicon.svg`,
   },
 };
 
