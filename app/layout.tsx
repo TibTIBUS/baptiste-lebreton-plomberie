@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+
+import { DemoNotice } from "./demo-notice";
+import { ScrollToTop } from "./scroll-to-top";
+import { StickyBarVisibility } from "./sticky-bar";
 import "./globals.css";
 
-const basePath =
-  process.env.GITHUB_PAGES === "true" ? "/jonathy-hauton-plomberie" : "";
+const isDemo = process.env.GITHUB_PAGES === "true";
+const basePath = isDemo ? "/jonathy-hauton-plomberie" : "";
 
 export const metadata: Metadata = {
   title: "JONATHY HAUTON | Plombier chauffagiste à Lessay",
@@ -16,9 +20,11 @@ export const metadata: Metadata = {
     "artisan RGE Manche",
     "plomberie sanitaire Lessay",
   ],
+  // La démonstration temporaire ne doit pas être indexée : elle ferait
+  // doublon avec le futur site de l'entreprise sur son propre domaine.
   robots: {
-    index: true,
-    follow: true,
+    index: !isDemo,
+    follow: !isDemo,
   },
   icons: {
     icon: `${basePath}/favicon.svg`,
@@ -33,7 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        {children}
+        <ScrollToTop />
+        <StickyBarVisibility />
+        <DemoNotice isDemo={isDemo} />
+      </body>
     </html>
   );
 }
