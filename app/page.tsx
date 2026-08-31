@@ -17,6 +17,8 @@ import {
   Wrench,
 } from "lucide-react";
 
+import { BrandLogo } from "./brand-logo";
+
 const business = {
   name: "JONATHY HAUTON",
   formerName: "anciennement LEMAZURIER-NAVARRE",
@@ -113,7 +115,7 @@ export default function Home() {
         <div className="shell header-inner">
           <a className="brand" href="#accueil" aria-label="Retour en haut de page">
             <span className="brand-mark" aria-hidden="true">
-              <Droplets size={22} strokeWidth={2.3} />
+              <BrandLogo />
             </span>
             <span>
               <strong>{business.name}</strong>
@@ -187,6 +189,9 @@ export default function Home() {
             </div>
 
             <div className="hero-visual">
+              <div className="hero-emblem" aria-hidden="true">
+                <BrandLogo />
+              </div>
               <div className="photo-frame">
                 <img
                   src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -457,7 +462,7 @@ export default function Home() {
       <footer className="footer">
         <div className="shell footer-top">
           <div className="brand footer-brand">
-            <span className="brand-mark" aria-hidden="true"><Droplets size={22} /></span>
+            <span className="brand-mark" aria-hidden="true"><BrandLogo /></span>
             <span><strong>{business.name}</strong><small>{business.formerName}</small></span>
           </div>
           <p>

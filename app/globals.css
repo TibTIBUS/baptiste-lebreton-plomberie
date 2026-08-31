@@ -3,19 +3,19 @@
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
 :root {
-  --navy-950: #061a2d;
-  --navy-900: #0a2239;
-  --navy-800: #12344f;
-  --cyan-500: #18b4cf;
-  --cyan-400: #47c9de;
-  --cyan-100: #dff6fa;
-  --sand-50: #f7f6f1;
-  --sand-100: #efede5;
-  --ink: #102334;
-  --muted: #617181;
-  --line: #dce4e7;
+  --navy-950: #0b0b0b;
+  --navy-900: #151515;
+  --navy-800: #292723;
+  --cyan-500: #b58a38;
+  --cyan-400: #d5ad5b;
+  --cyan-100: #f7edda;
+  --sand-50: #fbfaf7;
+  --sand-100: #f2eee5;
+  --ink: #191816;
+  --muted: #68645c;
+  --line: #e4dfd4;
   --white: #ffffff;
-  --yellow: #f4c95d;
+  --yellow: #dfbd73;
 }
 
 * {
@@ -76,20 +76,20 @@ summary {
   height: 7px;
   border-radius: 999px;
   background: var(--cyan-500);
-  box-shadow: 0 0 0 4px rgb(24 180 207 / 0.15);
+  box-shadow: 0 0 0 4px rgb(181 138 56 / 0.15);
 }
 
 .demo-separator {
   width: 1px;
   height: 12px;
-  background: rgb(10 34 57 / 0.24);
+  background: rgb(21 21 21 / 0.24);
 }
 
 .site-header {
   position: relative;
   z-index: 20;
   background: rgb(255 255 255 / 0.96);
-  border-bottom: 1px solid rgb(10 34 57 / 0.09);
+  border-bottom: 1px solid rgb(21 21 21 / 0.09);
 }
 
 .header-inner {
@@ -108,13 +108,20 @@ summary {
 }
 
 .brand-mark {
-  width: 43px;
-  height: 43px;
+  width: 56px;
+  height: 56px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  color: var(--navy-950);
-  background: var(--cyan-400);
+  overflow: hidden;
+  border: 1px solid rgb(181 138 56 / 0.35);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgb(11 11 11 / 0.09);
+}
+
+.brand-mark svg {
+  width: 100%;
+  height: 100%;
 }
 
 .brand > span:last-child {
@@ -147,7 +154,7 @@ summary {
 
 .desktop-nav a {
   position: relative;
-  color: #304759;
+  color: #3d3a34;
   font-size: 14px;
   font-weight: 650;
 }
@@ -177,7 +184,7 @@ summary {
   border-radius: 9px;
   color: var(--white);
   background: var(--navy-900);
-  box-shadow: 0 8px 24px rgb(6 26 45 / 0.14);
+  box-shadow: 0 8px 24px rgb(11 11 11 / 0.14);
   transition: transform 180ms ease, background 180ms ease;
 }
 
@@ -192,7 +199,7 @@ summary {
 }
 
 .header-call small {
-  color: #b9d1df;
+  color: #d8c8a8;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -210,8 +217,8 @@ summary {
   overflow: hidden;
   color: var(--white);
   background:
-    radial-gradient(circle at 78% 28%, rgb(24 180 207 / 0.13), transparent 26%),
-    linear-gradient(128deg, var(--navy-950), var(--navy-900) 58%, #123a56);
+    radial-gradient(circle at 78% 28%, rgb(213 173 91 / 0.16), transparent 28%),
+    linear-gradient(128deg, var(--navy-950), var(--navy-900) 58%, #29241b);
 }
 
 .hero::after {
@@ -221,7 +228,7 @@ summary {
   height: 520px;
   right: -270px;
   bottom: -320px;
-  border: 72px solid rgb(71 201 222 / 0.1);
+  border: 72px solid rgb(213 173 91 / 0.1);
   border-radius: 50%;
 }
 
@@ -278,7 +285,7 @@ summary {
 .hero-lead {
   max-width: 630px;
   margin: 26px 0 0;
-  color: #c9d9e4;
+  color: #ded7ca;
   font-size: clamp(16px, 1.6vw, 19px);
   line-height: 1.65;
 }
@@ -311,12 +318,12 @@ summary {
 .button-primary {
   color: var(--navy-950);
   background: var(--cyan-400);
-  box-shadow: 0 14px 36px rgb(24 180 207 / 0.2);
+  box-shadow: 0 14px 36px rgb(181 138 56 / 0.2);
 }
 
 .button-primary:hover {
-  background: #72d9e9;
-  box-shadow: 0 18px 38px rgb(24 180 207 / 0.28);
+  background: #e4c77f;
+  box-shadow: 0 18px 38px rgb(181 138 56 / 0.28);
 }
 
 .button-ghost {
@@ -338,7 +345,7 @@ summary {
   display: grid;
   place-items: center;
   padding: 24px;
-  background: rgb(6 26 45 / 0.76);
+  background: rgb(11 11 11 / 0.76);
   backdrop-filter: blur(7px);
   opacity: 0;
   pointer-events: none;
@@ -394,7 +401,7 @@ summary {
 .demo-notice-label {
   display: inline-flex;
   margin-bottom: 18px;
-  color: #168ca1;
+  color: #9a712b;
   font-size: 11px;
   font-weight: 850;
   letter-spacing: 0.12em;
@@ -458,7 +465,7 @@ summary {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: #dce8ef;
+  color: #ece3d2;
   font-size: 12px;
   font-weight: 700;
 }
@@ -470,6 +477,24 @@ summary {
 .hero-visual {
   position: relative;
   min-height: 490px;
+}
+
+.hero-emblem {
+  position: absolute;
+  z-index: 6;
+  top: -28px;
+  left: 18px;
+  width: 104px;
+  height: 104px;
+  padding: 8px;
+  background: var(--white);
+  border: 1px solid rgb(213 173 91 / 0.65);
+  box-shadow: 0 22px 50px rgb(0 0 0 / 0.3);
+}
+
+.hero-emblem svg {
+  width: 100%;
+  height: 100%;
 }
 
 .photo-frame {
@@ -485,21 +510,21 @@ summary {
   position: absolute;
   z-index: -1;
   inset: -18px 18px 18px -18px;
-  border: 1px solid rgb(71 201 222 / 0.3);
+  border: 1px solid rgb(213 173 91 / 0.3);
 }
 
 .photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.82) contrast(1.03);
+  filter: saturate(0.55) sepia(0.12) contrast(1.06);
 }
 
 .photo-frame::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgb(6 26 45 / 0.48));
+  background: linear-gradient(180deg, transparent 55%, rgb(11 11 11 / 0.48));
   pointer-events: none;
 }
 
@@ -514,7 +539,7 @@ summary {
   padding: 13px 15px;
   color: var(--navy-950);
   background: rgb(255 255 255 / 0.94);
-  box-shadow: 0 18px 30px rgb(6 26 45 / 0.2);
+  box-shadow: 0 18px 30px rgb(11 11 11 / 0.2);
 }
 
 .availability-icon {
@@ -534,7 +559,7 @@ summary {
 }
 
 .availability-card small {
-  color: #6f7d86;
+  color: #746f66;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -563,7 +588,7 @@ summary {
   align-items: center;
   gap: 7px;
   margin-bottom: 9px;
-  color: #617181;
+  color: #68645c;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -572,9 +597,9 @@ summary {
 
 .search-field {
   padding: 9px 11px;
-  color: #2a3c49;
-  background: #f5f7f8;
-  border: 1px solid #dce3e7;
+  color: #37342f;
+  background: #fbfaf7;
+  border: 1px solid #e6e0d5;
   border-radius: 18px;
   font-size: 12px;
 }
@@ -603,13 +628,13 @@ summary {
 }
 
 .search-result small {
-  color: #5d6d78;
+  color: #6a655d;
   font-size: 9px;
 }
 
 .search-result strong {
   overflow: hidden;
-  color: #184d96;
+  color: #9a712b;
   font-size: 12px;
   line-height: 1.35;
   text-overflow: ellipsis;
@@ -617,7 +642,7 @@ summary {
 }
 
 .search-result em {
-  color: #677680;
+  color: #716c63;
   font-size: 9px;
   font-style: normal;
 }
@@ -650,7 +675,7 @@ summary {
 }
 
 .conversion-grid > div > span {
-  color: #a8b4ba;
+  color: #a29b90;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -690,7 +715,7 @@ summary {
 }
 
 .section-kicker {
-  color: #168ca1;
+  color: #9a712b;
   margin-bottom: 13px;
 }
 
@@ -749,7 +774,7 @@ summary {
 .service-card:hover {
   transform: translateY(-5px);
   border-top-color: var(--cyan-500);
-  box-shadow: 0 22px 55px rgb(10 34 57 / 0.09);
+  box-shadow: 0 22px 55px rgb(21 21 21 / 0.09);
 }
 
 .qualification-intro {
@@ -797,7 +822,7 @@ summary {
 }
 
 .service-number {
-  color: #bdc7cb;
+  color: #bdb5a8;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -823,7 +848,7 @@ summary {
   gap: 7px;
   margin-top: auto;
   padding-top: 24px;
-  color: #247f91;
+  color: #9a712b;
   font-size: 10px;
   font-weight: 750;
   line-height: 1.45;
@@ -856,7 +881,7 @@ summary {
   content: "";
   position: absolute;
   inset: -24px 24px 24px -24px;
-  border: 1px solid rgb(71 201 222 / 0.27);
+  border: 1px solid rgb(213 173 91 / 0.27);
 }
 
 .visibility-photo img {
@@ -898,7 +923,7 @@ summary {
 
 .visibility-lead {
   margin: 24px 0 0;
-  color: #c5d8e4;
+  color: #d8cfbf;
   font-size: 17px;
   line-height: 1.75;
 }
@@ -924,7 +949,7 @@ summary {
   display: grid;
   place-items: center;
   color: var(--cyan-400);
-  background: rgb(71 201 222 / 0.09);
+  background: rgb(213 173 91 / 0.09);
 }
 
 .feature-list p {
@@ -932,7 +957,7 @@ summary {
   flex-direction: column;
   gap: 3px;
   margin: 0;
-  color: #a9c0ce;
+  color: #c8baa1;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -948,7 +973,7 @@ summary {
   gap: 4px;
   margin-top: 28px;
   padding: 16px 18px;
-  color: #b6ccd8;
+  color: #d5c7ad;
   background: rgb(255 255 255 / 0.055);
   border-left: 3px solid var(--yellow);
   font-size: 12px;
@@ -1026,7 +1051,7 @@ summary {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(150deg, transparent 58%, rgb(6 26 45 / 0.28));
+  background: linear-gradient(150deg, transparent 58%, rgb(11 11 11 / 0.28));
 }
 
 .revenue-photo-wrap img {
@@ -1041,7 +1066,7 @@ summary {
   z-index: 2;
   color: var(--navy-950);
   background: var(--white);
-  box-shadow: 0 25px 60px rgb(10 34 57 / 0.17);
+  box-shadow: 0 25px 60px rgb(21 21 21 / 0.17);
 }
 
 .metric-card-top {
@@ -1070,7 +1095,7 @@ summary {
   height: 5px;
   margin-top: 16px;
   overflow: hidden;
-  background: #e7edef;
+  background: #ece7de;
 }
 
 .metric-bar i {
@@ -1092,7 +1117,7 @@ summary {
 
 .metric-card-bottom svg {
   flex: 0 0 auto;
-  color: #0e9874;
+  color: #9a712b;
 }
 
 .metric-card-bottom span {
@@ -1121,7 +1146,7 @@ summary {
   justify-self: end;
   padding: 18px 22px;
   background: var(--white);
-  border: 1px solid #d9e1e3;
+  border: 1px solid #e3ddd2;
 }
 
 .google-rating-demo > strong {
@@ -1134,7 +1159,7 @@ summary {
 .testimonial-stars {
   display: flex;
   gap: 2px;
-  color: #e6a900;
+  color: #c99a3d;
 }
 
 .google-rating-demo small {
@@ -1156,12 +1181,12 @@ summary {
   flex-direction: column;
   padding: 27px;
   background: var(--white);
-  border: 1px solid #d9e1e3;
+  border: 1px solid #e3ddd2;
 }
 
 .testimonial-card blockquote {
   margin: 21px 0 26px;
-  color: #2b4354;
+  color: #3d3933;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 17px;
   line-height: 1.65;
@@ -1203,7 +1228,7 @@ summary {
 
 .demo-disclaimer {
   margin: 17px 0 0;
-  color: #78858c;
+  color: #787168;
   font-size: 10px;
   text-align: center;
 }
@@ -1302,7 +1327,7 @@ summary {
   height: 360px;
   right: -190px;
   top: -210px;
-  border: 62px solid rgb(71 201 222 / 0.1);
+  border: 62px solid rgb(213 173 91 / 0.1);
   border-radius: 50%;
 }
 
@@ -1315,7 +1340,7 @@ summary {
 .contact-copy > p {
   max-width: 650px;
   margin-top: 22px;
-  color: #bad0dc;
+  color: #d6c7a9;
 }
 
 .contact-checks {
@@ -1330,7 +1355,7 @@ summary {
   align-items: center;
   gap: 6px;
   padding: 8px 10px;
-  color: #d7e5ec;
+  color: #e6dcc9;
   background: rgb(255 255 255 / 0.06);
   border: 1px solid rgb(255 255 255 / 0.1);
   font-size: 11px;
@@ -1351,7 +1376,7 @@ summary {
 .contact-card-label {
   display: block;
   margin-bottom: 17px;
-  color: #78858c;
+  color: #787168;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -1402,15 +1427,15 @@ summary {
   justify-content: center;
   gap: 6px;
   margin: 12px 0 0;
-  color: #78858c;
+  color: #787168;
   font-size: 9px;
   text-align: center;
 }
 
 .footer {
   padding: 60px 0 92px;
-  color: #b8c7d1;
-  background: #041422;
+  color: #c9bcaa;
+  background: #080808;
 }
 
 .footer-top {
@@ -1425,7 +1450,7 @@ summary {
 }
 
 .footer-brand small {
-  color: #8fa3b0;
+  color: #9b9286;
 }
 
 .footer-top > p {
@@ -1456,7 +1481,7 @@ summary {
   margin-top: 45px;
   padding-top: 22px;
   border-top: 1px solid rgb(255 255 255 / 0.08);
-  color: #748793;
+  color: #7f776d;
   font-size: 9px;
   line-height: 1.5;
 }
@@ -1637,8 +1662,8 @@ summary:focus-visible {
   }
 
   .brand-mark {
-    width: 39px;
-    height: 39px;
+    width: 46px;
+    height: 46px;
   }
 
   .brand strong {
@@ -1697,6 +1722,14 @@ summary:focus-visible {
   .hero-visual {
     min-height: 390px;
     margin-top: 0;
+  }
+
+  .hero-emblem {
+    top: -18px;
+    left: 4px;
+    width: 82px;
+    height: 82px;
+    padding: 6px;
   }
 
   .photo-frame {
@@ -1860,7 +1893,7 @@ summary:focus-visible {
     grid-template-columns: 0.8fr 1.2fr;
     color: var(--white);
     background: var(--navy-950);
-    box-shadow: 0 -8px 24px rgb(6 26 45 / 0.2);
+    box-shadow: 0 -8px 24px rgb(11 11 11 / 0.2);
     transition: transform 260ms ease;
   }
 
