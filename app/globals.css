@@ -39,3 +39,32 @@
 
 /* Approved light mineral map treatment. */
 .service-map .leaflet-tile-pane{filter:grayscale(1) contrast(.72) brightness(1.14)}.service-map{background:#f0efeb}.service-map .leaflet-overlay-pane path{stroke:#a57b35;fill:#c8a15a;fill-opacity:.24;stroke-width:2.5}.service-map-heading{background:#faf8f3}.service-map .leaflet-control-zoom{border:1px solid #d7cdbb;border-radius:6px;overflow:hidden}.service-map .leaflet-control-zoom a{color:#4e442f;background:#fffefa}.service-map .leaflet-tooltip{box-shadow:none}
+
+/* Rappel d'entretien (suggestion) */
+.reminder-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:start}
+.reminder p{color:var(--muted);line-height:1.7}.reminder-caveat{font-size:13px;margin-top:18px}
+.reminder-card{background:#f7f4ed;color:var(--ink);padding:35px;border-radius:12px;border:1px solid var(--line)}
+.reminder-card .panel-kicker{color:#716144;margin-bottom:14px}.reminder-card h3{font-size:26px;font-weight:600;letter-spacing:-.03em;margin:0 0 20px}
+.reminder-eq{border:0;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:8px}.reminder-eq legend{font-size:13px;font-weight:650;margin-bottom:10px;padding:0}
+.reminder-eq label{border:1px solid #c6bdad;border-radius:999px;padding:9px 14px;font-size:13px;cursor:pointer;background:#fffefb}
+.reminder-eq label.on{background:#151511;color:#f7f4ed;border-color:#151511}.reminder-eq input{position:absolute;opacity:0;width:1px;height:1px}
+.reminder-eq label:focus-within{outline:3px solid #b38d49;outline-offset:2px}
+.reminder-quick{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:#716b60;margin-top:4px}
+.reminder-quick button{font:inherit;font-size:12px;border:1px solid #c6bdad;background:#fffefb;border-radius:999px;padding:7px 12px;cursor:pointer}
+.reminder-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font:inherit;font-weight:650;font-size:15px;background:#151511;color:#f7f4ed;border:0;border-radius:8px;padding:15px;cursor:pointer}
+.reminder-btn:disabled{opacity:.45;cursor:not-allowed}.reminder-ok{font-size:13px;color:#40392e;margin:14px 0 0}.reminder-note{font-size:12px;color:#716b60;margin:16px 0 0;line-height:1.6}
+@media(max-width:950px){.reminder-grid{grid-template-columns:1fr;gap:32px}.reminder-card{padding:25px}}
+
+/* Page QR avis */
+.qr-page{min-height:100vh;padding:70px 0;background:var(--paper)}.qr-page h1{font-size:38px;line-height:1.15;letter-spacing:-.03em;margin:0 0 18px}
+.qr-lead{max-width:480px;color:var(--muted);line-height:1.7;margin-bottom:28px}.qr-note{font-size:12px;color:var(--muted);margin-top:22px;max-width:420px}
+.qr-mini{display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;cursor:pointer;font:inherit;text-align:left;color:var(--ink)}
+.qr-mini-img{width:96px;height:96px;display:block}.qr-mini-img svg,.qr-full-img svg{width:100%;height:100%;display:block}
+.qr-mini-label{display:flex;align-items:center;gap:8px;font-weight:650;font-size:14px}.qr-sample-note{font-size:13px;color:#716144;margin-top:14px;max-width:420px;line-height:1.6}
+.qr-full{position:fixed;inset:0;z-index:100;background:#fff;color:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;gap:10px}
+.qr-full h2{font-size:30px;margin:0}.qr-full p{margin:0;color:#333}.qr-full-img{width:min(82vw,60vh,520px);aspect-ratio:1;margin:14px 0}
+.qr-badge{background:#151511;color:#fff;font-weight:800;letter-spacing:.12em;font-size:12px;padding:5px 12px;border-radius:6px}.qr-thanks{font-weight:650;margin-top:8px!important}
+.qr-close{position:absolute;top:16px;right:16px;display:flex;align-items:center;gap:6px;font:inherit;font-weight:650;background:#fff;color:#000;border:2px solid #000;border-radius:10px;padding:10px 14px;cursor:pointer}
+.reminder h2{margin:0 0 22px}.qr-page h1{margin-top:0}
+.footer-qr{border-top:1px solid var(--line);padding:22px 0;display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px}.footer-qr>p:first-child{font-size:13px;color:var(--muted);margin:0}
+.footer-qr .qr-mini{padding:8px 12px;gap:12px}.footer-qr .qr-mini-img{width:56px;height:56px}.footer-qr .qr-mini-label{font-size:12px}.footer-qr .qr-sample-note{flex-basis:100%;margin:0;font-size:12px}
