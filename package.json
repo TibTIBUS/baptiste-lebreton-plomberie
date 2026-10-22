@@ -1,5 +1,5 @@
 {
-  "name": "jonathy-hauton-plomberie",
+  "name": "baptiste-lebreton-plomberie",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -61,5 +61,5 @@
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "displayName": "JONATHY HAUTON \u2014 Plomberie Chauffage"
+  "displayName": "Baptiste Lebreton plomberie"
 }
