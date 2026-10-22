@@ -1,28 +1,14 @@
-# JONATHY HAUTON — Plomberie, chauffage & sanitaire
+# Baptiste Lebreton plomberie
 
-Site vitrine de la SARL JONATHY HAUTON, anciennement Société LEMAZURIER-NAVARRE, artisan plombier chauffagiste à Lessay (50430).
+Proposition de site de démonstration pour la SARL Lebreton Baptiste à Créances. Non officiel, non indexable.
 
-Il présente les prestations, qualifications et coordonnées de l’entreprise afin de faciliter sa visibilité locale et les prises de contact.
+Sources publiques : https://www.sarl-lebreton-baptiste.fr/ et ses mentions légales, consultées le 22 octobre 2026.
 
-## Informations principales
+Logo repris sans modification du site existant. Photo illustrative issue de Pexels, ne représente pas une intervention de l’entreprise. Aucune qualification ou avis non vérifié affiché.
 
-- Plomberie, chauffage et sanitaire
-- Artisan RGE, Qualibat et Professionnel du Gaz
-- 442 route de la Zone d’Activités de Gaslonde, 50430 Lessay
-- 02 33 46 58 07
-- SIREN : 341 877 884
+## Développement
 
-Le fichier `.openai/hosting.json` est volontairement neutre : il ne contient aucune liaison à un site de démonstration existant.
-
-## Démarrage
-
-```bash
 npm install
-npm run dev
-```
+npm run build:pages
 
-Pour un déploiement via Sites, crée un nouveau projet Sites depuis ce dépôt afin de générer sa propre configuration d’hébergement.
-
-## Crédits photos
-
-Les photos utilisées dans la démonstration proviennent de banques gratuites Pexels et Pixabay. Les liens de crédit sont affichés dans le pied de page du site.
+Pour GitHub Pages : GITHUB_PAGES=true npm run build:pages
